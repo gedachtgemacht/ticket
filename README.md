@@ -1,7 +1,15 @@
 # ticket.
 
-Internes Ticket-Board für Teams (self-hosted team ticket board: Slack-style sidebar and threads, Trello-style board; German UI, zero dependencies, MIT). Python-stdlib + SQLite, eine statische Oberfläche in `web/index.html`
+Ticket-Board für Teams zum Selbsthosten (self-hosted team ticket board: Slack-style sidebar and threads, Trello-style board; German UI, zero dependencies, MIT). Python-stdlib + SQLite, eine statische Oberfläche in `web/index.html`
 (kein Framework, keine CDN-Abhängigkeit, kein Netz nach außen, kein Mailversand). Ticketnummern `TKT-n`.
+
+![Board (dunkel)](docs/screenshots/board-dunkel.png)
+
+| Karte mit Thread | Board hell | Handy |
+|---|---|---|
+| ![Karte](docs/screenshots/karte-dunkel.png) | ![Board hell](docs/screenshots/board-hell.png) | ![Handy](docs/screenshots/mobil-hell.png) |
+
+Die Bilder zeigen erfundene Demodaten.
 
 - `server.py` Server, 127.0.0.1:8909 (`TICKET_PORT`), systemd `ticket` als User `ticket`
 - `web/index.html` die ganze Oberfläche (Slack-Schale: Seitenleiste, Projekte als Kanäle, Thread; Trello-Board: Listen, Karten, Kartenrückseite)
