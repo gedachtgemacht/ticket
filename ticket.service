@@ -1,0 +1,24 @@
+[Unit]
+Description=ticket. Board
+After=network.target
+
+[Service]
+Type=simple
+User=ticket
+Group=ticket
+Environment=TICKET_TRUST_PROXY=1
+ExecStart=/usr/bin/python3 /opt/ticket/server.py
+WorkingDirectory=/opt/ticket
+Restart=always
+RestartSec=3
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/ticket
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target
